@@ -42,20 +42,20 @@ describe("Auth KasirAja", function() {
         token = response.body.data.accessToken; // Simpan token untuk digunakan di tes berikutnya
     });
     
-    // it("Positive - Success Create User", async () => {
-    //     const payload = {
-    //             "name": "User Bunga",
-    //             "email": "bunga@gmail.com",
-    //             "password": "test123"
-    //     }
-    //     console.log("Create User Payload",payload)
+    it("Positive - Success Create User", async () => {
+        const payload = {
+                "name": "User Bunga",
+                "email": "bunga@gmail.com",
+                "password": "test123"
+        }
+        console.log("Create User Payload",payload)
 
-    //     const response = await request (baseUrl)
-    //         .post("/users")
-    //         .send(payload)
-    //         .set("Authorization", `Bearer ${token}`)
+        const response = await request (baseUrl)
+            .post("/users")
+            .send(payload)
+            .set("Authorization", `Bearer ${token}`)
         
-    //     expect(response.status).to.equal(201);
-    //     console.log(response.body);
-    // })
+        expect(response.status).to.equal(201);
+        console.log(response.body);
+    })
 });
