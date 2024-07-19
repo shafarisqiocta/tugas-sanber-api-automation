@@ -2,7 +2,7 @@ import { expect } from "chai";
 import { register } from "../function/registration.spec.js";
 import { login } from "../function/login.spec.js";
 import { createUser, createUserInvalid } from "../function/createUser.spec.js";
-import { getUserDetail } from "../function/getUser.spec.js";
+import { getUserDetail, getUserDetailFailed } from "../function/getUser.spec.js";
 import { updateUser } from "../function/updateUser.spec.js";
 import { deleteUser } from "../function/deleteUser.spec.js";
 
@@ -46,6 +46,13 @@ describe("Auth Section", function ()  {
         expect(response.body.status).to.equal("success")
         console.log("User Detail Response:", response.body)
     })
+
+    // it("Negative - Failed Get User Detail", async () => {
+    //     const response = await getUserDetailFailed(userId)
+    //     expect(response.status).to.equal(401)
+    //     expect(response.body.status).to.equal("fail")
+    //     console.log("User Detail Response:", response.body)
+    // })
 
     it("Positive - Success Update User", async () => {
         const response = await updateUser(userId,accessToken)

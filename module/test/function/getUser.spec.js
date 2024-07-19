@@ -11,3 +11,12 @@ export async function getUserDetail(accessToken,userId) {
     return response
 
 }
+
+export async function getUserDetailFailed(userId){ // get user detail tanpa accessToken
+
+    const response = await request(baseUrl) // base url
+    .get(`/users/${userId}`) // endpoint
+    .set("Content-Type", "application/json")
+
+    return response
+}
