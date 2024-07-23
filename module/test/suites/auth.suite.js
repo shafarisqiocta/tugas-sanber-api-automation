@@ -33,12 +33,12 @@ describe("Auth Section", function ()  {
         userId = (await response).body.data.userId
     })
 
-    // it("Negative - Failed Create User", async () => {
-    //     const response = await createUserInvalid(accessToken)
-    //     expect(response.status).to.equal(400)
-    //     expect(response.body.status).to.equal("fail")
-    //     console.log("Create User Response:", response.body)
-    // })
+    // // it("Negative - Failed Create User", async () => {
+    // //     const response = await createUserInvalid(accessToken)
+    // //     expect(response.status).to.equal(400)
+    // //     expect(response.body.status).to.equal("fail")
+    // //     console.log("Create User Response:", response.body)
+    // // })
 
     it("Positive - Success Get User Detail", async () => {
         const response = await getUserDetail(accessToken,userId)
@@ -47,12 +47,12 @@ describe("Auth Section", function ()  {
         console.log("User Detail Response:", response.body)
     })
 
-    // it("Negative - Failed Get User Detail", async () => {
-    //     const response = await getUserDetailFailed(userId)
-    //     expect(response.status).to.equal(401)
-    //     expect(response.body.status).to.equal("fail")
-    //     console.log("User Detail Response:", response.body)
-    // })
+    // // it("Negative - Failed Get User Detail", async () => {
+    // //     const response = await getUserDetailFailed(userId)
+    // //     expect(response.status).to.equal(401)
+    // //     expect(response.body.status).to.equal("fail")
+    // //     console.log("User Detail Response:", response.body)
+    // // })
 
     it("Positive - Success Update User", async () => {
         const response = await updateUser(userId,accessToken)

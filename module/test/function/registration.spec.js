@@ -4,9 +4,9 @@ import { baseUrl } from "../../data/config.js"
 
 export async function register (){
     const payload = {
-        "name": "nama Toko",
-        "email": "contoh@gmail.com",
-        "password": "bunga123"
+        "name": "Toko Bunga",
+        "email": "bunga123@gmail.com",
+        "password": "tokobunga"
     };
 
     const response = await request(baseUrl)

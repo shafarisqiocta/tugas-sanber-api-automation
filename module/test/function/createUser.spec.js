@@ -4,9 +4,9 @@ import { baseUrl } from "../../data/config.js"
 
 export async function createUser(accessToken){
     const payload = {
-            "name": "User Bunga",
-            "email": "bunga@gmail.com",
-            "password": "test123"
+            "name": "Bunga User 1",
+            "email": "test24@gmail.com",
+            "password": "bunga241"
     }
 
     const response = await request(baseUrl)

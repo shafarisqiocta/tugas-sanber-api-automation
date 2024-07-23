@@ -7,6 +7,6 @@ export async function deleteUser(userId,accessToken){
         .delete(`/users/${userId}`)
         .set("Authorization", `Bearer ${accessToken}`)
 
-    return response
+    return (await response)
 
 }

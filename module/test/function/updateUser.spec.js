@@ -4,8 +4,8 @@ import { baseUrl } from "../../data/config.js"
 
 export async function updateUser(userId,accessToken){
     const payload = {
-        "name": "User Bunga",
-        "email": "bunga@gmail.com"
+        "name": "User 2 (Shafa)",
+        "email": "test24@gmail.com"
     }
 
     const response = await request(baseUrl)
@@ -14,5 +14,5 @@ export async function updateUser(userId,accessToken){
         .set("Authorization", `Bearer ${accessToken}`)
         .set("Content-Type", "application/json")
 
-    return response
+    return (await response)
 }

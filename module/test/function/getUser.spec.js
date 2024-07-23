@@ -8,7 +8,7 @@ export async function getUserDetail(accessToken,userId) {
     .set("Authorization", `Bearer ${accessToken}`)
     .set("Content-Type", "application/json")
 
-    return response
+    return (await response)
 
 }
 
